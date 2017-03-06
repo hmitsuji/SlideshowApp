@@ -42,17 +42,17 @@ class ViewController: UIViewController {
 
   
   func ebisuImageChange() {
-    if ebisuCount == 0 {
+    if ebisuCount%6 == 0 {
       ebisuImageView.image = UIImage(named: "ebisu1")
-    } else if ebisuCount == 1 {
+    } else if ebisuCount%6 == 1 {
       ebisuImageView.image = UIImage(named: "ebisu2")
-    } else if ebisuCount == 2 {
+    } else if ebisuCount%6 == 2 {
       ebisuImageView.image = UIImage(named: "ebisu3")
-    } else if ebisuCount == 3 {
+    } else if ebisuCount%6 == 3 {
       ebisuImageView.image = UIImage(named: "ebisu4")
-    } else if ebisuCount == 4 {
+    } else if ebisuCount%6 == 4 {
       ebisuImageView.image = UIImage(named: "ebisu5")
-    } else if ebisuCount == 5 {
+    } else if ebisuCount%6 == 5 {
       ebisuImageView.image = UIImage(named: "ebisu6")
     }
   }
@@ -90,9 +90,10 @@ class ViewController: UIViewController {
 
   @IBAction func nextButtonTapped(_ sender: Any) {
     ebisuCount += 1
-    if ebisuCount == 6 {
+/*    if ebisuCount == 6 {
       ebisuCount = 0
     }
+*/
     ebisuImageChange()
   }
   
@@ -101,12 +102,11 @@ class ViewController: UIViewController {
     if ebisuCount == -1 {
       ebisuCount = 5
     }
+
     ebisuImageChange()
   }
   
   @IBAction func returnToTop(segue: UIStoryboardSegue)  {
-      print("効いてます")
-//    ebisuCount = etailViewController.
   }
   
 }

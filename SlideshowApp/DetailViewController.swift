@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
   
     var ebisuDetail: UIImage?
     var ebisuCount2 = 0
+    let ebisuRandom = Int(arc4random())
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,11 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let vc:ViewController = segue.destination as! ViewController
+    vc.ebisuCount = ebisuCount2 + ebisuRandom
+  }
 
     /*
     // MARK: - Navigation

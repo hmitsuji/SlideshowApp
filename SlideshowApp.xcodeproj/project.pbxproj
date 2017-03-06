@@ -59,15 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				D7C5E2891E68083200715407 /* AppDelegate.swift */,
-				D7C5E28B1E68083200715407 /* ViewController.swift */,
 				D7C5E28D1E68083200715407 /* Main.storyboard */,
 				D7C5E2931E68083200715407 /* Assets.xcassets */,
 				D7C5E2951E68083200715407 /* LaunchScreen.storyboard */,
 				D7C5E2981E68083200715407 /* Info.plist */,
 				D7C5E2901E68083200715407 /* SlideshowApp.xcdatamodeld */,
-				D7C5E29E1E68DC2D00715407 /* DetailViewController.swift */,
+				D7DBC3FC1E6D6EF700791D56 /* ViewController */,
 			);
 			path = SlideshowApp;
+			sourceTree = "<group>";
+		};
+		D7DBC3FC1E6D6EF700791D56 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7C5E28B1E68083200715407 /* ViewController.swift */,
+				D7C5E29E1E68DC2D00715407 /* DetailViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +318,7 @@
 				D7C5E29D1E68083200715407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

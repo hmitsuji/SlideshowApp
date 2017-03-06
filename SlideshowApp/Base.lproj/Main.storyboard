@@ -110,7 +110,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="別の画像に戻るかも"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="randomSegue" id="BM5-9v-maM"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="BM5-9v-maM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2d-ZT-rTn">

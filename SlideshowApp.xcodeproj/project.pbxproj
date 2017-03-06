@@ -13,6 +13,7 @@
 		D7C5E2921E68083200715407 /* SlideshowApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7C5E2901E68083200715407 /* SlideshowApp.xcdatamodeld */; };
 		D7C5E2941E68083200715407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7C5E2931E68083200715407 /* Assets.xcassets */; };
 		D7C5E2971E68083200715407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C5E2951E68083200715407 /* LaunchScreen.storyboard */; };
+		D7C5E29F1E68DC2D00715407 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C5E29E1E68DC2D00715407 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D7C5E2931E68083200715407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7C5E2961E68083200715407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7C5E2981E68083200715407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7C5E29E1E68DC2D00715407 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D7C5E2951E68083200715407 /* LaunchScreen.storyboard */,
 				D7C5E2981E68083200715407 /* Info.plist */,
 				D7C5E2901E68083200715407 /* SlideshowApp.xcdatamodeld */,
+				D7C5E29E1E68DC2D00715407 /* DetailViewController.swift */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				D7C5E28C1E68083200715407 /* ViewController.swift in Sources */,
 				D7C5E2921E68083200715407 /* SlideshowApp.xcdatamodeld in Sources */,
 				D7C5E28A1E68083200715407 /* AppDelegate.swift in Sources */,
+				D7C5E29F1E68DC2D00715407 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

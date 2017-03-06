@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     detailViewController.ebisuCount2 = ebisuCount
   }
 
-  
+  // Countを画像数で割って余りの数で画像の表示を変更
   func ebisuImageChange() {
     if ebisuCount%6 == 0 {
       ebisuImageView.image = UIImage(named: "ebisu1")

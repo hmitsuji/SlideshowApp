@@ -24,6 +24,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-No-3xT">
                                 <rect key="frame" x="37" y="60" width="300" height="400"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="cZy-g1-dzs"/>
                                     <constraint firstAttribute="height" constant="400" id="fU3-it-Bck"/>
@@ -53,22 +54,30 @@
                                     <action selector="slideShowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVP-Qz-BTK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-ki-9zq" userLabel="Image View Button">
+                                <rect key="frame" x="37" y="60" width="300" height="400"/>
+                                <connections>
+                                    <action selector="ImageViewTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctL-6u-gmC"/>
+                                    <segue destination="MKY-s3-hau" kind="show" id="DH4-GF-npP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="qAT-ki-9zq" firstAttribute="trailing" secondItem="ic0-No-3xT" secondAttribute="trailing" id="9Hu-QV-jd3"/>
                             <constraint firstItem="ic0-No-3xT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Knv-lm-l8a"/>
                             <constraint firstItem="dw3-qI-b2Q" firstAttribute="leading" secondItem="Fbi-5e-ANX" secondAttribute="trailing" constant="80" id="Lyk-oX-IiZ"/>
                             <constraint firstItem="u2v-mJ-KqD" firstAttribute="leading" secondItem="dw3-qI-b2Q" secondAttribute="trailing" constant="80" id="SeR-uZ-Zak"/>
                             <constraint firstItem="dw3-qI-b2Q" firstAttribute="top" secondItem="ic0-No-3xT" secondAttribute="bottom" constant="60" id="UDs-J2-4kB"/>
                             <constraint firstItem="ic0-No-3xT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aDS-YW-9ol"/>
                             <constraint firstItem="u2v-mJ-KqD" firstAttribute="top" secondItem="ic0-No-3xT" secondAttribute="bottom" constant="60" id="bDD-yk-IEs"/>
+                            <constraint firstItem="qAT-ki-9zq" firstAttribute="top" secondItem="ic0-No-3xT" secondAttribute="top" id="g35-lO-aDR"/>
                             <constraint firstItem="Fbi-5e-ANX" firstAttribute="top" secondItem="ic0-No-3xT" secondAttribute="bottom" constant="60" id="hA8-op-w7F"/>
+                            <constraint firstItem="qAT-ki-9zq" firstAttribute="bottom" secondItem="ic0-No-3xT" secondAttribute="bottom" id="ilb-ax-bpc"/>
                             <constraint firstItem="dw3-qI-b2Q" firstAttribute="centerX" secondItem="ic0-No-3xT" secondAttribute="centerX" id="oxK-qP-k04"/>
+                            <constraint firstItem="qAT-ki-9zq" firstAttribute="leading" secondItem="ic0-No-3xT" secondAttribute="leading" id="v4J-X3-bCc"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fMW-qY-adL" appends="YES" id="a17-mY-bQB"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="dw3-qI-b2Q" id="exs-KF-RTx"/>
@@ -78,11 +87,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fMW-qY-adL">
-                    <connections>
-                        <segue destination="MKY-s3-hau" kind="show" identifier="" id="YfF-gF-mzV"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>

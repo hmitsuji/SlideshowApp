@@ -18,12 +18,13 @@ class ViewController: UIViewController {
   var ebisuCount = 0
   var timer: Timer!
   var timer_sec: Double = 0.0
-  var slideShowButtonCount = 0
+  var slideShowChange:Bool = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     ebisuImageChange()
+    ebisuImageView.isUserInteractionEnabled = true
   }
 
   override func didReceiveMemoryWarning() {
@@ -32,10 +33,7 @@ class ViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // segueから遷移先のResultViewControllerを取得する
     let detailViewController:DetailViewController = segue.destination as! DetailViewController
-    // 遷移先のResultViewControllerで宣言しているx, yに値を代入して渡す
-//    detailViewController.ebisuDetail = ebisuImageView.image!
     detailViewController.ebisuDetail = ebisuImageView.image!
     detailViewController.ebisuCount2 = ebisuCount
   }
@@ -57,9 +55,9 @@ class ViewController: UIViewController {
     }
   }
   
-  @IBAction func slideShowButtonTapped(_ sender: Any) {
-    slideShowButtonCount += 1
-    if slideShowButtonCount%2 == 1 {
+  
+  func slideShow() {
+    if slideShowChange == true {
       print("ONだよ")
         if self.timer == nil {
           self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ebisuImageSlide), userInfo: nil, repeats: true)
@@ -67,7 +65,7 @@ class ViewController: UIViewController {
       nextButton.isEnabled = false
       backButton.isEnabled = false
       slideShowButton.setTitle("停止", for: .normal)
-    } else if slideShowButtonCount%2 == 0 {
+    } else if slideShowChange == false {
       print("OFFだよ")
         if self.timer != nil {
           self.timer.invalidate()   // 現在のタイマーを破棄する
@@ -79,6 +77,20 @@ class ViewController: UIViewController {
     }
   }
   
+  @IBAction func slideShowButtonTapped(_ sender: Any) {
+    if slideShowChange == true {
+      slideShowChange = false
+    } else {
+      slideShowChange = true
+    }
+    slideShow()
+  }
+
+  @IBAction func ImageViewTapped(_ sender: Any) {
+    print("ボタンが押されています")
+    slideShowChange = false
+    slideShow()
+  }
   
   func ebisuImageSlide(timer: Timer) {
     ebisuCount += 1
@@ -90,10 +102,6 @@ class ViewController: UIViewController {
 
   @IBAction func nextButtonTapped(_ sender: Any) {
     ebisuCount += 1
-/*    if ebisuCount == 6 {
-      ebisuCount = 0
-    }
-*/
     ebisuImageChange()
   }
   
@@ -102,7 +110,6 @@ class ViewController: UIViewController {
     if ebisuCount == -1 {
       ebisuCount = 5
     }
-
     ebisuImageChange()
   }
   

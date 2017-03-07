@@ -14,8 +14,6 @@ class DetailViewController: UIViewController {
   
     var ebisuDetail: UIImage?
     var ebisuCount2 = 0
-    let ebisuRandom = Int(arc4random())
-  
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +27,6 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   
-  // 戻る時に画像をランダムで表示するためのメソッド
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let vc:ViewController = segue.destination as! ViewController
-    vc.ebisuCount = ebisuCount2 + ebisuRandom
-  }
 
     /*
     // MARK: - Navigation

@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="height" constant="36" id="S5C-GE-Ybg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="そのまま戻る"/>
+                                <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="Tfb-6O-d9j" kind="unwind" unwindAction="returnToTopWithSegue:" id="vPC-uk-8OH"/>
                                 </connections>
